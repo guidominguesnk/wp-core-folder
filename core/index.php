@@ -14,12 +14,14 @@ if (!defined('ABSPATH')) {
 }
 
 function get_config() {
-  /* Default values */
-  $default = include dirname(__FILE__) . '/default.php';
+  $theme_dir = get_template_directory();
 
-  /* Theme values */
-  $global = include dirname(__FILE__) . '/../config/global.php';
+  /* Default values. */
+  $default = include $theme_dir . '/core/default.php';
 
-  /* Override default value */
+  /* Theme values. */
+  $global = include $theme_dir . '/config/global.php';
+
+  /* Override default values. */
   return array_replace_recursive($default, $global);
 }

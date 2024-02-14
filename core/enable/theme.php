@@ -19,7 +19,9 @@ if (!defined('ABSPATH')) {
  * 7: Enable support for editor styles.
  */
 
-require_once dirname(__FILE__) . '/../index.php';
+$theme_dir = get_template_directory();
+
+require_once $theme_dir . '/core/index.php';
 
 function init_theme() {
   $config = get_config();

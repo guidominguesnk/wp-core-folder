@@ -9,12 +9,14 @@ if (!defined('ABSPATH')) {
   exit(); /* Exit if accessed directly */
 }
 
-require_once dirname(__FILE__) . '/../index.php';
+$theme_dir = get_template_directory();
 
-function init_lib_aos() {
+require_once $theme_dir . '/core/index.php';
+
+function init_lib_swiper() {
   $config = get_config();
 
-  if ($config['enable']['lib']['aos']) {
+  if ($config['enable']['lib']['swiper']) {
     add_action('wp_enqueue_scripts', function () {
       wp_enqueue_script(
         'swiper-bundle',
@@ -33,4 +35,4 @@ function init_lib_aos() {
   }
 }
 
-init_lib_aos();
+init_lib_swiper();

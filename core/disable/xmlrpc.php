@@ -9,7 +9,9 @@ if (!defined('ABSPATH')) {
   exit(); /* Exit if accessed directly */
 }
 
-require_once dirname(__FILE__) . '/../index.php';
+$theme_dir = get_template_directory();
+
+require_once $theme_dir . '/core/index.php';
 
 function init_disable_xmlrpc() {
   $config = get_config();

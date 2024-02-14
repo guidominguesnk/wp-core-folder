@@ -12,7 +12,6 @@ module.exports = {
   arrowParens: 'always',
   semi: false,
   endOfLine: 'auto',
-
   parser: 'php',
   plugins: ['@prettier/plugin-php'],
   braceStyle: '1tbs',

@@ -1,9 +1,5 @@
 <?php
 /**
- * Theme functions and definitions.
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package WP Core Folder
  * @author Gui Domingues <hello@guidomingues.com>
  * @link https://github.com/guidominguesnk/wp-core-folder

@@ -1,14 +1,17 @@
 # Organize and Manage WordPress Features with Ease
 
-WP Core is a code organization structure for WordPress themes that aims to facilitate feature management. It divides the code into three distinct folders: Core, Config, and Vendor, simplifying the location, activation, and deactivation of features.
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
+
+WP Core is a code organization structure for WordPress themes that aims to facilitate feature management.
 
 ## Features:
 
-**Organized code:** The structure divides the code into three folders:
+**Organized code:** The structure divides the code into four folders:
 
-- **Core:** Contains the main theme files.
-- **Config:** Allows you to customize the theme configuration without modifying the Core folder files.
-- **Vendor:** Stores third-party code, such as libraries and frameworks.
+- **Enable:** Activates features.
+- **Disable:** Deactivates features.
+- **Config:** Customizes theme without modifying core files.
+- **Vendor:** Stores third-party code.
 
 **Selective feature deactivation:** Quickly and easily disable WordPress features and plugins, optimizing your website's performance.
 
@@ -23,9 +26,9 @@ return [
   /**
    * Disable WordPress features.
    * 
-   * 1. Disable block editor.
-   * 2. Disable RSS feeds.
-   * 3. Disable comments.
+   * 1. Block editor.
+   * 2. RSS feeds.
+   * 3. Comments.
    */
   'disable' => [
     'block-library' => true, /* 1 */
@@ -40,8 +43,8 @@ return [
    * 1. Allow SVG upload.
    * 2. Enable menus.
    * 3. Allow custom logo.
-   * 4. Enable smooth scroll.
-   * 5. Enable animations with AOS.
+   * 4. Load smooth scroll library.
+   * 5. Load animations library (AOS).
    */
   'enable' => [
     'svg' => true, /* 1 */
@@ -74,16 +77,16 @@ return [
 
 ## Get started
 
-- **Create the folders:** Create the `core`, `config`, and `vendor` folders inside your theme directory.  
-- **Add the configuration file:** Create a `global.php` file in the `config` folder and add the above sample code, modifying it according to your needs.  
-- **Activate the configuration:** In your theme's `functions.php file`, include the following code:
+**1:** Add the `core` folder directly into your theme directory.  
+**2:** Adjust settings in `default.php` and `index.php` files within the `config` folder to meet your requirements.  
+**3:** In your theme's `functions.php file`, include the following code:
 
 ```php
 <?php
 
 $theme_dir = get_template_directory();
 
-/* Include essential core files. (Do not modify these files!) */
+/* Include essential core files. */
 require_once $theme_dir . '/core/core.php';
 ```
 

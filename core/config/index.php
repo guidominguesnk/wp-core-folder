@@ -30,7 +30,7 @@ return [
     // 'wlwmanifest' => true,
   ],
   'enable' => [
-    'svg' => false,
+    // 'svg' => false,
     'theme' => [
       // 'menus' => true,
       // 'custom-logo' => true,

@@ -6,7 +6,7 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit(); /* Exit if accessed directly */
+  exit(); /* Exit if accessed directly. */
 }
 
 $theme_dir = get_template_directory();

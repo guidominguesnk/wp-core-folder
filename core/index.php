@@ -10,18 +10,16 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit(); /* Exit if accessed directly. */
+  exit(); // Exit if accessed directly.
 }
 
 function get_config() {
-  $theme_dir = get_template_directory();
+  // Default values.
+  $default = include CORE_THEME_DIR . 'core/config/default.php';
 
-  /* Default values. */
-  $default = include $theme_dir . '/core/config/default.php';
+  // Theme values.
+  $global = include CORE_THEME_DIR . 'core/config/index.php';
 
-  /* Theme values. */
-  $global = include $theme_dir . '/core/config/index.php';
-
-  /* Override default values. */
+  // Override default values.
   return array_replace_recursive($default, $global);
 }

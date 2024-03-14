@@ -6,10 +6,8 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit(); /* Exit if accessed directly. */
+  exit(); // Exit if accessed directly.
 }
 
-$theme_dir = get_template_directory();
-
-/* Include essential core files. */
-require_once $theme_dir . '/core/core.php';
+// Include essential core files.
+require_once get_template_directory() . '/core/core.php';

@@ -6,9 +6,7 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit(); /* Exit if accessed directly. */
-} ?>
+  exit(); // Exit if accessed directly.
+}
 
-<?php get_header(); ?>
-
-<?php get_footer(); ?>
+get_header();

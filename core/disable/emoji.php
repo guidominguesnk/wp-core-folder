@@ -8,12 +8,10 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit(); /* Exit if accessed directly. */
+  exit(); // Exit if accessed directly.
 }
 
-$theme_dir = get_template_directory();
-
-require_once $theme_dir . '/core/index.php';
+require_once CORE_THEME_DIR . 'core/index.php';
 
 function init_disable_emoji() {
   $config = get_config();

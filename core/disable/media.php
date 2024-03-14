@@ -6,18 +6,16 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit(); /* Exit if accessed directly. */
+  exit(); // Exit if accessed directly.
 }
 
-$theme_dir = get_template_directory();
-
-require_once $theme_dir . '/core/index.php';
+require_once CORE_THEME_DIR . 'core/index.php';
 
 function init_disable_media() {
   $config = get_config();
 
   if ($config['disable']['media']) {
-    /* Disabled attachment media pages. */
+    // Disabled attachment media pages.
     function disable_media_pages(): void {
       if (is_attachment()) {
         global $wp_query;
@@ -29,7 +27,7 @@ function init_disable_media() {
     add_filter('template_redirect', __NAMESPACE__ . '\disable_media_pages');
     add_filter('redirect_canonical', __NAMESPACE__ . '\disable_media_pages', 0);
 
-    /* Disabled attachment media page links. */
+    // Disabled attachment media page links.
     function attachment_link(string $url, int $id): string {
       if ($attachment_url = wp_get_attachment_url($id)) {
         return $attachment_url;

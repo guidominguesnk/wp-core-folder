@@ -3,7 +3,7 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
 
 WP Core is a code organization structure for WordPress themes that aims to facilitate feature management.
-
+ 
 ## Features:
 
 **Organized code:** The structure divides the code into four folders:
@@ -11,7 +11,6 @@ WP Core is a code organization structure for WordPress themes that aims to facil
 - **Enable:** Activates features.
 - **Disable:** Deactivates features.
 - **Config:** Customizes theme without modifying core files.
-- **Vendor:** Stores third-party code.
 
 **Selective feature deactivation:** Quickly and easily disable WordPress features and plugins, optimizing your website's performance.
 
@@ -53,11 +52,6 @@ return [
       'custom-logo' => true, /* 3 */
       // ...
     ],
-    'lib' => [
-      'smooth-scroll' => true, /* 4 */
-      'aos' => true, /* 5 */
-      // ...
-    ],
   ],
 ];
 ```
@@ -84,10 +78,8 @@ return [
 ```php
 <?php
 
-$theme_dir = get_template_directory();
-
 /* Include essential core files. */
-require_once $theme_dir . '/core/core.php';
+require_once get_template_directory() . '/core/core.php';
 ```
 
 ## Notes

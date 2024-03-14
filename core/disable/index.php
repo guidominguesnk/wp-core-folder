@@ -6,24 +6,23 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit(); /* Exit if accessed directly. */
+  exit(); // Exit if accessed directly.
 }
 
-$theme_dir = get_template_directory();
-
-require_once $theme_dir . '/core/disable/block-library.php';
-require_once $theme_dir . '/core/disable/comment.php';
-require_once $theme_dir . '/core/disable/emoji.php';
-require_once $theme_dir . '/core/disable/feed.php';
-require_once $theme_dir . '/core/disable/generated-icons.php';
-require_once $theme_dir . '/core/disable/global-styles.php';
-require_once $theme_dir . '/core/disable/jpeg-compression.php';
-require_once $theme_dir . '/core/disable/jquery.php';
-require_once $theme_dir . '/core/disable/media.php';
-require_once $theme_dir . '/core/disable/oembed.php';
-require_once $theme_dir . '/core/disable/rest-api.php';
-require_once $theme_dir . '/core/disable/rest-user.php';
-require_once $theme_dir . '/core/disable/shortlink.php';
-require_once $theme_dir . '/core/disable/version.php';
-require_once $theme_dir . '/core/disable/wlwmanifest.php';
-require_once $theme_dir . '/core/disable/xmlrpc.php';
+require_once CORE_THEME_DIR . 'core/disable/block-library.php';
+require_once CORE_THEME_DIR . 'core/disable/comment.php';
+require_once CORE_THEME_DIR . 'core/disable/dashboard.php';
+require_once CORE_THEME_DIR . 'core/disable/emoji.php';
+require_once CORE_THEME_DIR . 'core/disable/feed.php';
+require_once CORE_THEME_DIR . 'core/disable/generated-icons.php';
+require_once CORE_THEME_DIR . 'core/disable/global-styles.php';
+require_once CORE_THEME_DIR . 'core/disable/jpeg-compression.php';
+require_once CORE_THEME_DIR . 'core/disable/jquery.php';
+require_once CORE_THEME_DIR . 'core/disable/media.php';
+require_once CORE_THEME_DIR . 'core/disable/oembed.php';
+require_once CORE_THEME_DIR . 'core/disable/rest-api.php';
+require_once CORE_THEME_DIR . 'core/disable/rest-user.php';
+require_once CORE_THEME_DIR . 'core/disable/shortlink.php';
+require_once CORE_THEME_DIR . 'core/disable/version.php';
+require_once CORE_THEME_DIR . 'core/disable/wlwmanifest.php';
+require_once CORE_THEME_DIR . 'core/disable/xmlrpc.php';

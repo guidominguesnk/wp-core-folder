@@ -6,21 +6,19 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit(); /* Exit if accessed directly. */
+  exit(); // Exit if accessed directly.
 }
 
-$theme_dir = get_template_directory();
-
-require_once $theme_dir . '/core/index.php';
+require_once CORE_THEME_DIR . 'core/index.php';
 
 function init_disable_shortlink() {
   $config = get_config();
 
   if ($config['disable']['shortlink']) {
-    /* Removes shortlink tag from <head>. */
+    // Removes shortlink tag from <head>.
     remove_action('wp_head', 'wp_shortlink_wp_head', 10);
 
-    /* Removes shortlink tag from HTML headers. */
+    // Removes shortlink tag from HTML headers.
     remove_action('template_redirect', 'wp_shortlink_header', 11);
   }
 }

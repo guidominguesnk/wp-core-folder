@@ -6,12 +6,10 @@
  */
 
 if (!defined('ABSPATH')) {
-  exit(); /* Exit if accessed directly. */
+  exit(); // Exit if accessed directly.
 }
 
-$theme_dir = get_template_directory();
-
-require_once $theme_dir . '/../index.php';
+require_once CORE_THEME_DIR . 'core/index.php';
 
 /* Redirects all feeds to home page. */
 function disable_feeds_rss(): void {
@@ -22,17 +20,17 @@ function init_disable_feed() {
   $config = get_config();
 
   if ($config['disable']['rss']) {
-    /* Disables feeds. */
+    // Disables feeds.
     add_action('do_feed', __NAMESPACE__ . '\disable_feeds_rss', 1);
     add_action('do_feed_rdf', __NAMESPACE__ . '\disable_feeds_rss', 1);
     add_action('do_feed_rss', __NAMESPACE__ . '\disable_feeds_rss', 1);
     add_action('do_feed_rss2', __NAMESPACE__ . '\disable_feeds_rss', 1);
     add_action('do_feed_atom', __NAMESPACE__ . '\disable_feeds_rss', 1);
 
-    /* Removes RSS feed links. */
+    // Removes RSS feed links.
     remove_action('wp_head', 'feed_links', 2);
 
-    /* Removes all extra RSS feed links. */
+    // Removes all extra RSS feed links.
     remove_action('wp_head', 'feed_links_extra', 3);
   }
 }
